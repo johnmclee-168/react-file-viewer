@@ -46,7 +46,6 @@ class FileViewer extends Component {
       case 'sql':
       case 'md': {
         return withFetching(MdViewer, this.props);
-        // return MdViewer;
       }
       case 'jpg':
       case 'jpeg':
