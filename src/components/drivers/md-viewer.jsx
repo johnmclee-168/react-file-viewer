@@ -1,40 +1,18 @@
 // Copyright (c) 2017 PlanGrid, Inc.
 
-import React, { Component } from 'react';
-
-import ReactDataGrid from 'react-data-grid';
-// import CSV from 'comma-separated-values';
+import React, { Component } from 'react'; // eslint-disable-line no-unused-vars
+import { marked } from 'marked'; // eslint-disable-line no-unused-vars
+import parse from 'html-react-parser'; // eslint-disable-line no-unused-vars
 
 class MdViewer extends Component {
 
   static parse(data) {
-
-    console.log(`John > MdViewer`);
-    console.log(data);
-    // const rows = [];
-    // const columns = [];
-
-    // new CSV(data).forEach((array) => {
-    //   if (columns.length < 1) {
-    //     array.forEach((cell, idx) => {
-    //       columns.push({
-    //         key: `key-${idx}`,
-    //         name: cell,
-    //         resizable: true,
-    //         sortable: true,
-    //         filterable: true,
-    //       });
-    //     });
-    //   } else {
-    //     const row = {};
-    //     array.forEach((cell, idx) => {
-    //       row[`key-${idx}`] = cell;
-    //     });
-    //     rows.push(row);
-    //   }
-    // });
-
-    // return { rows, columns };
+    // console.log('John > MdViewer');
+    // console.log(data);
+    // var rawMarkup = marked("This is _Markdown_.", { sanitize: true });
+    const rawMarkup = marked(data, { sanitize: true });
+    // return { __html: rawMarkup };
+    return rawMarkup;
   }
 
   constructor(props) {
@@ -47,16 +25,10 @@ class MdViewer extends Component {
   }
 
   render() {
-    return <div>Hello John on MD files</div>;
-    // const { rows, columns } = this.state;
-    // return (
-    //   <ReactDataGrid
-    //     columns={columns}
-    //     rowsCount={rows.length}
-    //     rowGetter={i => rows[i]}
-    //     minHeight={this.props.height || 650}
-    //   />
-    // );
+    console.log('john kkk');
+    console.log(this.state);
+    return parse(this.state);
+    // return <div>Hello World</div>;
   }
 }
 

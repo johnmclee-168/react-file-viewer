@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import * as THREE from 'three';
 import 'styles/photo360.scss';
 
-export default class extends Component {
+export default class extends Component { // eslint-disable-line react/display-name
   constructor(props) {
     super(props);
     let savedX;

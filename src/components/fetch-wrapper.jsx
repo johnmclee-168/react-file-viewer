@@ -6,7 +6,7 @@ import Error from './error';
 import Loading from './loading';
 
 function withFetching(WrappedComponent, props) {
-  return class extends Component {
+  return class extends Component { // eslint-disable-line react/display-name
     constructor(props) { // eslint-disable-line no-shadow
       super(props);
       this.state = {};
