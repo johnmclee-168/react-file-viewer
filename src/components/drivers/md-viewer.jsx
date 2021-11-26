@@ -60,4 +60,4 @@ class MdViewer extends Component {
   }
 }
 
-export default CsvViewer;
+export default MdViewer;

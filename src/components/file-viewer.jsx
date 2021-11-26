@@ -15,6 +15,7 @@ import {
   UnsupportedViewer,
   PhotoViewerWrapper,
   AudioViewer,
+  MdViewer,
 } from './drivers';
 
 class FileViewer extends Component {
@@ -44,7 +45,7 @@ class FileViewer extends Component {
       case 'txt':
       case 'sql':
       case 'md': {
-        return withFetching(CsvViewer, this.props);
+        return withFetching(MdViewer, this.props);
       }
       case 'jpg':
       case 'jpeg':
