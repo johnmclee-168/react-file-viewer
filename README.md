@@ -12,7 +12,7 @@ Extendable file viewer for web
  - docx
  - Video: mp4, webm
  - Audio: mp3
-
+ - txt, md, sql
 
 ## Usage
 
