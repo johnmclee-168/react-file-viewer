@@ -19,11 +19,23 @@ import mov from '../example_files/step.mov'
 import mp3 from '../example_files/sample.mp3'
 import rtf from '../example_files/sample.rtf';
 import pdf from '../example_files/sample.pdf';
+import md from '../example_files/TEST.md';
+
+// ReactDOM.render(
+//   <FileViewer
+//     fileType="pdf"
+//     filePath={pdf}
+//   />,
+//   window.document.getElementById('app')
+// );
+
+console.log('md JohnLee');
+console.log(md);
 
 ReactDOM.render(
   <FileViewer
-    fileType="pdf"
-    filePath={pdf}
+    fileType="md"
+    filePath={md}
   />,
   window.document.getElementById('app')
 );

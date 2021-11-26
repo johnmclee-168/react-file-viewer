@@ -24,7 +24,7 @@ module.exports = {
   },
   resolve: {
     modules: [path.resolve(__dirname, 'src'), path.resolve(__dirname, 'example_files'), 'node_modules'],
-    extensions: ['.js', '.json', '.jsx'],
+    extensions: ['.ts', 'tsx', '.js', '.json', '.jsx'],
   },
 
   module: {
@@ -73,7 +73,7 @@ module.exports = {
         enforce: 'pre',
       },
       {
-        test: [/\.wexbim$/, /\.jpg$/, /\.docx$/, /\.csv$/, /\.mp4$/, /\.xlsx$/, /\.doc$/, /\.avi$/, /\.webm$/, /\.mov$/, /\.mp3$/, /\.rtf$/, /\.pdf$/],
+        test: [/\.wexbim$/, /\.jpg$/, /\.docx$/, /\.csv$/, /\.md$/, /\.mp4$/, /\.xlsx$/, /\.doc$/, /\.avi$/, /\.webm$/, /\.mov$/, /\.mp3$/, /\.rtf$/, /\.pdf$/],
         loader: 'file-loader',
       },
       {
@@ -82,7 +82,7 @@ module.exports = {
         options: {
           limit: 10000,
         },
-      },
+      }
     ],
   },
 

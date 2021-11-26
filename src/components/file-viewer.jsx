@@ -15,6 +15,7 @@ import {
   UnsupportedViewer,
   PhotoViewerWrapper,
   AudioViewer,
+  MdViewer,
 } from './drivers';
 
 class FileViewer extends Component {
@@ -40,6 +41,11 @@ class FileViewer extends Component {
       case 'xlsx': {
         const newProps = Object.assign({}, this.props, { responseType: 'arraybuffer' });
         return withFetching(XlsxViewer, newProps);
+      }
+      case 'txt':
+      case 'sql':
+      case 'md': {
+        return withFetching(MdViewer, this.props);
       }
       case 'jpg':
       case 'jpeg':

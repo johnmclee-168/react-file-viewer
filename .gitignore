@@ -10,6 +10,6 @@ node_modules
 .npm
 
 # build folder
-dist
-lib
+# dist
+# lib
 .idea

@@ -6,7 +6,7 @@ import mammoth from 'mammoth';
 import 'styles/docx.scss';
 import Loading from '../loading';
 
-export default class extends Component {
+export default class extends Component { // eslint-disable-line react/display-name
   componentDidMount() {
     const jsonFile = new XMLHttpRequest();
     jsonFile.open('GET', this.props.filePath, true);
