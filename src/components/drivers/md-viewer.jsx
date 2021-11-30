@@ -1,4 +1,4 @@
-// Copyright (c) 2017 PlanGrid, Inc.
+// Copyright (c) 2021 John Lee.
 
 import React, { Component } from 'react'; // eslint-disable-line no-unused-vars
 import { marked } from 'marked';
